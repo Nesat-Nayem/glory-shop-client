@@ -12,6 +12,9 @@ import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Checkout from "./Pages/Checkout/Checkout";
 import Payment from "./Pages/Payment/Payment";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import MyOrder from "./Pages/MyOrder/MyOrder";
+import MyReviews from "./Pages/MyReviews/MyReviews";
+import ManageOrders from "./Pages/ManageOrders/ManageOrders";
 
 function App() {
   return (
@@ -27,6 +30,10 @@ function App() {
           <Route path="/products/checkout" element={<PrivateRoute> <Checkout /> </PrivateRoute>} />
           <Route path="/products/Payment" element={<PrivateRoute> <Payment /> </PrivateRoute>} />
           <Route path="/products/dashboard" element={<PrivateRoute> <Dashboard /> </PrivateRoute>} />
+          <Route path="/products/myOrder" element={ <MyOrder /> } />
+          <Route path="/products/customerReview" element={ <MyReviews /> } />
+          <Route path="/products/manageOrders" element={ <ManageOrders /> } />
+          <Route path="/products/manageOrders" element={ <AddProducts /> } />
           
         </Routes>
         <Footer />
