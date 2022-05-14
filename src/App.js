@@ -15,6 +15,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrder from "./Pages/MyOrder/MyOrder";
 import MyReviews from "./Pages/MyReviews/MyReviews";
 import ManageOrders from "./Pages/ManageOrders/ManageOrders";
+import AddProducts from "./Pages/AddProducts/AddProducts";
 
 function App() {
   return (
