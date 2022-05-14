@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import Banner from '../Banner/Banner';
-import CustomerReview from '../CustormerReview/CustomerReview';
+// import CustomerReview from '../CustormerReview/CustomerReview';
 import SubBanner from './../SubBanner/SubBanner';
 import WhyUs from './../WhyUs/WhyUs';
 import { useSelector, useDispatch } from 'react-redux';
 import Card from '../Card/Card';
 import { addProduct, addWishList, setProducts } from '../../redux/slice';
 import { useNavigate } from 'react-router-dom';
+import CustomerReview from '../CustomerReview/CustomerReview';
 
 const Home = () => {
     const dispatch = useDispatch();
