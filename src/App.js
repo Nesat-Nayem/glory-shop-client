@@ -11,6 +11,7 @@ import ViewProduct from "./Pages/ViewProduct/ViewProduct";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Checkout from "./Pages/Checkout/Checkout";
 import Payment from "./Pages/Payment/Payment";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/products/:category/:productId" element={<ViewProduct />} />
           <Route path="/products/checkout" element={<PrivateRoute> <Checkout /> </PrivateRoute>} />
           <Route path="/products/Payment" element={<PrivateRoute> <Payment /> </PrivateRoute>} />
+          <Route path="/products/dashboard" element={<PrivateRoute> <Dashboard /> </PrivateRoute>} />
           
         </Routes>
         <Footer />
