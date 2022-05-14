@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Pages/Header/Header";
@@ -18,6 +17,7 @@ import ManageOrders from "./Pages/ManageOrders/ManageOrders";
 import AddProducts from "./Pages/AddProducts/AddProducts";
 import ManageProducts from "./Pages/ManageProducts/ManageProducts";
 import MakeAdmin from "./Pages/MakeAdmin/MakeAdmin";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
@@ -39,6 +39,8 @@ function App() {
           <Route path="/products/addProducts" element={ <AddProducts /> } />
           <Route path="/products/manageProducts" element={ <ManageProducts /> } />
           <Route path="/products/makeAdmin" element={ <MakeAdmin /> } />
+          <Route path="*" element={ <NotFoundPage /> } />
+          
           
         </Routes>
         <Footer />
