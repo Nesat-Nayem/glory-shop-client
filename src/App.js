@@ -8,6 +8,9 @@ import Home from "./Pages/Home/Home";
 import Products from "./Pages/Products/Products";
 import FilteredProduct from "./Pages/FilteredProduct/FilteredProduct";
 import ViewProduct from "./Pages/ViewProduct/ViewProduct";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import Checkout from "./Pages/Checkout/Checkout";
+import Payment from "./Pages/Payment/Payment";
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:category" element={<FilteredProduct />} />
           <Route path="/products/:category/:productId" element={<ViewProduct />} />
+          <Route path="/products/checkout" element={<PrivateRoute> <Checkout /> </PrivateRoute>} />
+          <Route path="/products/Payment" element={<PrivateRoute> <Payment /> </PrivateRoute>} />
           
         </Routes>
         <Footer />
