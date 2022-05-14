@@ -9,7 +9,6 @@ import Register from '../Register/Register';
 import './Header.css';
 import Wishlist from '../Wishlist/Wishlist';
 import useFirebase from '../../firebase/useFirebase';
-// import Wishlist from '../wishlist/wishlist';
 
 
 
