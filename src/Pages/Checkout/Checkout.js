@@ -21,7 +21,7 @@ const Checkout = () => {
         data.orderStates = "pending";
         data.orderData = new Date().toLocaleDateString();
 
-        fetch('https://softy-shop-web.herokuapp.com/addOrder', {
+        fetch('http://localhost:5000/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://softy-shop-web.herokuapp.com/products")
+    fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
@@ -21,7 +21,7 @@ const ManageProducts = () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`https://softy-shop-web.herokuapp.com/deleteProduct/${id}`, {
+        fetch(`http://localhost:5000/deleteProduct/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

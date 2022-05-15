@@ -87,7 +87,7 @@ const ViewProduct = () => {
     
 
     useEffect(()=>{
-        fetch('https://softy-shop-web.herokuapp.com/products')
+        fetch('http://localhost:5000/products')
         .then(res => res.json())
         .then(data => dispatch(setProducts(data)))
     }, [])

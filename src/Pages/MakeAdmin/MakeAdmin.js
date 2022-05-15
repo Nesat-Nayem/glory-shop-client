@@ -13,7 +13,7 @@ const MakeAdmin = () => {
         e.preventDefault();
         console.log(userEmail);
 
-        fetch(`https://softy-shop-web.herokuapp.com/updateAdmin/${userEmail}`, {
+        fetch(`http://localhost:5000/updateAdmin/${userEmail}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

@@ -17,7 +17,7 @@ const AddProducts = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch("https://softy-shop-web.herokuapp.com/addProduct", {
+        fetch("http://localhost:5000/addProduct", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

@@ -10,7 +10,7 @@ const MyOrder = () => {
     const [myOrders, setMyOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`https://softy-shop-web.herokuapp.com/myOrder/${user?.email}`)
+        fetch(`http://localhost:5000/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setMyOrders(data));
     }, [user.email, myOrders]);
@@ -24,7 +24,7 @@ const MyOrder = () => {
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-                fetch(`https://softy-shop-web.herokuapp.com/deleteOrder/${id}`, {
+                fetch(`http://localhost:5000/deleteOrder/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())
