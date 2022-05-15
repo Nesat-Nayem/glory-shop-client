@@ -13,10 +13,11 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrder from "./Pages/MyOrder/MyOrder";
 import MyReviews from "./Pages/MyReviews/MyReviews";
 import ManageOrders from "./Pages/ManageOrders/ManageOrders";
-import AddProducts from "./Pages/AddProducts/AddProducts";
+// import AddProducts from "./Pages/AddProducts/AddProducts";
 import ManageProducts from "./Pages/ManageProducts/ManageProducts";
 import MakeAdmin from "./Pages/MakeAdmin/MakeAdmin";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import AddProducts from "./Pages/AddProudcts/AddProducts";
 
 function App() {
   return (

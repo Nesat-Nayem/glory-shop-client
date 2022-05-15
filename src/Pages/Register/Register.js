@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
 import useFirebase from '../../firebase/useFirebase';
-// import useFirebase from '../../firebase/useFirebase';
+
 import './Register.css'
 
 const Register = () => {

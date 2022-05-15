@@ -3,7 +3,6 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, Go
 import initializeAuthentication from './firebase.init';
 
 initializeAuthentication()
-
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +13,6 @@ const useFirebase = () => {
 
     // user registration
     const createUser = (name, email, password) => {
-        console.log('create user hit')
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -44,8 +42,6 @@ const useFirebase = () => {
 
     // Sign In User by Form
     const SignInUser = (email, password) => {
-        console.log(email)
-        console.log('hit firebase file 2')
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -74,7 +70,6 @@ const useFirebase = () => {
 
     // google login function
     const signInWithGoogle = () => {
-        console.log('hit firebase')
         setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then((result) => {
@@ -128,7 +123,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    return (
+    return {
         user,
         isLoading,
         signInWithGoogle,
@@ -136,7 +131,7 @@ const useFirebase = () => {
         createUser,
         SignInUser,
         logOut
-    );
+    }
 };
 
 export default useFirebase;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import swal from "sweetalert";
-import "./AddProducts.css"
+import "./AddProudcts.css"
 
 const AddProducts = () => {
     const [product, setProduct] = useState({});
