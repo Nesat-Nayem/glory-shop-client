@@ -31,13 +31,14 @@ function App() {
           <Route path="/products/:category/:productId" element={<ViewProduct />} />
           <Route path="/products/checkout" element={<PrivateRoute> <Checkout /> </PrivateRoute>} ></ Route >
           <Route path="/products/Payment" element={<PrivateRoute> <Payment /> </PrivateRoute>} ></ Route >
-          <Route exact path="/dashboard" element={<PrivateRoute> <Dashboard /> </PrivateRoute>} />
-          <Route path="/products/myOrder" element={ <MyOrder /> } />
-          <Route path="/products/customerReview" element={ <MyReviews /> } />
-          <Route path="/products/manageOrders" element={ <ManageOrders /> } />
-          <Route path="/products/addProducts" element={ <AddProducts /> } />
-          <Route path="/products/manageProducts" element={ <ManageProducts /> } />
-          <Route path="/products/makeAdmin" element={ <MakeAdmin /> } />
+          <Route exact path="/dashboard" element={<PrivateRoute> <Dashboard /> </PrivateRoute>} >
+            <Route path="/dashboard/myOrder" element={ <MyOrder /> } />
+            <Route path="/dashboard/customerReview" element={ <MyReviews /> } />
+            <Route path="/dashboard/manageOrders" element={ <ManageOrders /> } />
+            <Route path="/dashboard/addProducts" element={ <AddProducts /> } />
+            <Route path="/dashboard/manageProducts" element={ <ManageProducts /> } />
+            <Route path="/dashboard/makeAdmin" element={ <MakeAdmin /> } />
+          </ Route >
           <Route path="*" element={ <NotFoundPage /> } />
           
           
