@@ -19,6 +19,7 @@ const Login = () => {
 
    const handleSubmit = (e) => {
       e.preventDefault();
+      console.log('send user info 1')
       SignInUser(userInfo.email, userInfo.password1);
    }
    return (

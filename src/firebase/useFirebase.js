@@ -14,6 +14,7 @@ const useFirebase = () => {
 
     // user registration
     const createUser = (name, email, password) => {
+        console.log('create user hit')
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -43,6 +44,8 @@ const useFirebase = () => {
 
     // Sign In User by Form
     const SignInUser = (email, password) => {
+        console.log(email)
+        console.log('hit firebase file 2')
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -71,6 +74,7 @@ const useFirebase = () => {
 
     // google login function
     const signInWithGoogle = () => {
+        console.log('hit firebase')
         setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then((result) => {
@@ -93,7 +97,7 @@ const useFirebase = () => {
 
        //save user  in database
        const saveUserDB = (user) =>{
-        fetch('https://softy-shop-web.herokuapp.com/addUser',{
+        fetch('http://localhost:5000/addUser',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user) 
@@ -102,7 +106,7 @@ const useFirebase = () => {
     }
     //check user in database
     const isAddUser = (email, addUser) =>{
-        fetch(`https://softy-shop-web.herokuapp.com/user/${email}`)
+        fetch(`http://localhost:5000/user/${email}`)
         .then(res => res.json())
         .then(data => {
             if(data.length === 0){

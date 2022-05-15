@@ -2,6 +2,7 @@ import React from "react";
 import './PrivateRoute.css';
 import { Navigate, useLocation } from "react-router-dom";
 import useFirebase from "../../firebase/useFirebase";
+// import useFirebase from "../../firebase/useFirebase";
 
 const PrivateRoute = ({ children, ...rest }) => {
     let location = useLocation();

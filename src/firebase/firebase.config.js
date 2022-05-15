@@ -1,10 +1,10 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyBdydF6G80ySM50FokgWi74gACWY0mnHgM",
-    authDomain: "glory-store-4b3c7.firebaseapp.com",
-    projectId: "glory-store-4b3c7",
-    storageBucket: "glory-store-4b3c7.appspot.com",
-    messagingSenderId: "764146697339",
-    appId: "1:764146697339:web:e582d181e24cdb7cb5cede"
-  };
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBzQhKKin12NnLtQGUtJdrofux2awqs2uo",
+  authDomain: "glory-shop.firebaseapp.com",
+  projectId: "glory-shop",
+  storageBucket: "glory-shop.appspot.com",
+  messagingSenderId: "1082999827703",
+  appId: "1:1082999827703:web:f56359ee8d923bb8a077f2"
+};
   export default firebaseConfig;
