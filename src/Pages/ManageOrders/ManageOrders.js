@@ -6,7 +6,7 @@ const ManageOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders")
+        fetch("https://softy-shop-web.herokuapp.com/allOrders")
             .then((res) => res.json())
             .then((data) => setAllOrders(data));
     }, [allOrders]);

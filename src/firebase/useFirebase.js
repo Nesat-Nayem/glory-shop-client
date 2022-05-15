@@ -97,7 +97,7 @@ const useFirebase = () => {
 
        //save user  in database
        const saveUserDB = (user) =>{
-        fetch('http://localhost:5000/addUser',{
+        fetch('https://softy-shop-web.herokuapp.com/addUser',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user) 
@@ -106,7 +106,7 @@ const useFirebase = () => {
     }
     //check user in database
     const isAddUser = (email, addUser) =>{
-        fetch(`http://localhost:5000/user/${email}`)
+        fetch(`https://softy-shop-web.herokuapp.com/user/${email}`)
         .then(res => res.json())
         .then(data => {
             if(data.length === 0){

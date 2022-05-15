@@ -11,7 +11,7 @@ const FilteredProduct = () => {
     const products = useSelector((state) => state.products.allProducts);
 
     useEffect(() => {
-      fetch('http://localhost:5000/products')
+      fetch('https://softy-shop-web.herokuapp.com/products')
       .then(res => res.json())
       .then(data => dispatch(setProducts(data)))
   }, [])
