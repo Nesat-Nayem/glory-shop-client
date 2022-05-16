@@ -21,9 +21,11 @@ const MakeAdmin = () => {
         })
             .then((res) => res.json())
             .then((data) => {
+                
                 if (data.modifiedCount > 0) {
                     swal("Admin added Successfully", "", "success");
                 }
+                console.log(data)
             });
     };
 

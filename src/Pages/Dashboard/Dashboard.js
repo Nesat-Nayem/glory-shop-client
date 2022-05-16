@@ -19,7 +19,7 @@ const Dashboard = () => {
 
     }, [user])
 
-    console.log(userInfo)
+    // console.log(userInfo)
     if (!userInfo) {
         return <h1>Loading..</h1>
     }

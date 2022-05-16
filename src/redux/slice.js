@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const productsReducer = createSlice({
-  name: 'softy-shop',
+  name: 'glory-shop',
   initialState,
   reducers: {
       setProducts: (state, {payload}) => {

@@ -73,6 +73,13 @@ const AddProducts = () => {
                             required
                         />
                         <input
+                            type="number"
+                            onBlur={handleBlur}
+                            name="id"
+                            placeholder="Product Id"
+                            required
+                        />
+                        <input
                             onBlur={handleBlur}
                             type="text"
                             name="img"
