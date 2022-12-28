@@ -10,7 +10,7 @@ const MyOrder = () => {
     const [myOrders, setMyOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://glory-shop.onrender.com/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setMyOrders(data));
     }, [user.email, myOrders]);
@@ -24,7 +24,7 @@ const MyOrder = () => {
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-                fetch(`http://localhost:5000/deleteOrder/${id}`, {
+                fetch(`https://glory-shop.onrender.com/deleteOrder/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())

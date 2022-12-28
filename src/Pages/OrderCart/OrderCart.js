@@ -10,7 +10,7 @@ const OrderCard = ({ order, cancelOrder }) => {
     const { user } = useFirebase();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://glory-shop.onrender.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setUserInfo(data[0]))
 
@@ -18,7 +18,7 @@ const OrderCard = ({ order, cancelOrder }) => {
 
 
     const shippedOrder = (id) => {
-        fetch(`http://localhost:5000/updateStates/${id}`, {
+        fetch(`https://glory-shop.onrender.com/updateStates/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",
@@ -41,7 +41,7 @@ const OrderCard = ({ order, cancelOrder }) => {
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-                fetch(`http://localhost:5000/deleteOrder/${id}`, {
+                fetch(`https://glory-shop.onrender.com/deleteOrder/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())

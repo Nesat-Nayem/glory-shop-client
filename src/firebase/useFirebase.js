@@ -92,7 +92,7 @@ const useFirebase = () => {
 
        //save user  in database
        const saveUserDB = (user) =>{
-        fetch('http://localhost:5000/addUser',{
+        fetch('https://glory-shop.onrender.com/addUser',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user) 
@@ -101,7 +101,7 @@ const useFirebase = () => {
     }
     //check user in database
     const isAddUser = (email, addUser) =>{
-        fetch(`http://localhost:5000/user/${email}`)
+        fetch(`https://glory-shop.onrender.com/user/${email}`)
         .then(res => res.json())
         .then(data => {
             if(data.length === 0){

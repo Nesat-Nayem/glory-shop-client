@@ -17,7 +17,7 @@ const AddProducts = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch("http://localhost:5000/addProduct", {
+        fetch("https://glory-shop.onrender.com/addProduct", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

@@ -21,7 +21,7 @@ const Checkout = () => {
         data.orderStates = "pending";
         data.orderData = new Date().toLocaleDateString();
 
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://glory-shop.onrender.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

@@ -13,7 +13,7 @@ const Dashboard = () => {
     const handleShow = () => setShow(true);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`)
+        fetch(`https://glory-shop.onrender.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setUserInfo(data[0]))
 

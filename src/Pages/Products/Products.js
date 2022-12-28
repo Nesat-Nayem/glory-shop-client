@@ -10,7 +10,7 @@ const Products = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://glory-shop.onrender.com/products')
         .then(res => res.json())
         .then(data => dispatch(setProducts(data)))
     }, [])
@@ -30,7 +30,7 @@ const Products = () => {
 
     // end of the code
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://glory-shop.onrender.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
